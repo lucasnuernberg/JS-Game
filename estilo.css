@@ -5,20 +5,28 @@
 }
 
 body {
+    margin: auto;
     position: relative;    
     max-height: 100vh;
     background: #8a2828;
+
 }
 
-header h1 {
-    font-size: 2.8rem;
+div.container {
+    margin: auto;
+}
+
+header h1, h3 {
+    font-size: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10rem;
+    margin: 5rem auto;
     color: aqua;
     text-shadow: 2px 2px 2px black;
 }
+
+
 
 div.main-body {
     margin-top: 10rem;
@@ -27,7 +35,7 @@ div.main-body {
     align-items: center;
 }
 
-div.main-body button#selectCharacter {
+button#selectCharacter {
     background-color: black;
     width: 100px;
     height: 55px;
@@ -36,11 +44,20 @@ div.main-body button#selectCharacter {
 }
 
 div.main-fotos {
+    width: 320px;
+    margin: auto;
     
 }
 
-img {
+div.main-fotos img {
     width: 60px;
     margin: 10px 20px 10px 20px;
     border-radius: 10rem;
+}
+
+.center {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
