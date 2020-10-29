@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game</title>
-    <link rel="stylesheet" type="text/css" href="estilo.css" />
-    
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h3>Choose your Character</h3>           
-        </header>
-        
-        <div class="main-fotos">
-            <img id="0" src="images/lucasCharacter.JPG" alt="">
-            <img id="1" src="images/lucasCharacter.JPG" alt="">      
-            <img id="2" src="images/lucasCharacter.JPG" alt="">
-            <img id="3" src="images/lucasCharacter.JPG" alt="">
-            <img id="4" src="images/lucasCharacter.JPG" alt="">
-            <img id="5" src="images/lucasCharacter.JPG" alt="">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <script src="codigo.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h3>Choose your Character</h3>           
+            </header>
+            
+            <div class="main-fotos">
+                <img id="0" onclick="mudar(0)" src="images/lucasCharacter.JPG" alt="">
+                <img id="1" onclick="mudar(1)" src="images/gaara.jpg" alt="">      
+                <img id="2" onclick="mudar(2)" src="images/kakashi.png" alt="">
+                <img id="3" onclick="mudar(3)" src="images/naruto.jpg" alt="">
+                <img id="4" onclick="mudar(4)" src="images/orochimaru.png" alt="">
+                <img id="5" onclick="mudar(5)" src="images/sasuke.jpeg" alt="">
+            </div>
         </div>
-    </div>
-    <div class="center">
-        <button id="selectCharacter">Init Game</button>
-    </div>
-    
-    <script src="codigo.js"></script>
-</body>
+        <div class="center">
+            <button id="selectCharacter" onclick="redirect()">Init Game</button>
+        </div>
+    </body>
+
+
 </html>
