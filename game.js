@@ -65,8 +65,7 @@ function andarDiv() {
 
 
 document.onclick = function() {
-        posyImg -= 70       
-        
+        posyImg -= 70   
         
 }
 
@@ -74,12 +73,15 @@ function verificar() {
         if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
                 document.location.href = 'gameover.html'
         }
+        if (posyImg < 0 || posyImg >= 480) {
+                document.location.href = 'gameover.html'        
+        }
 }
 
 createObject()
 setInterval(moverImg, 5)
 setInterval(andarDiv, 5)
-setInterval(createObject, 2900)
+setInterval(createObject, 3000)
 setInterval(verificar, 0.001)
 
 //lógica da colisão frontal 
