@@ -1,2 +1,3 @@
 # JS-Game
- This is a Game mada with JS
+I am creating a simple Game
+still developing...
