@@ -17,9 +17,3 @@ function mudar(x) {
     linkImg = imageElement[x].src
     confirmation = true
 }
-
-
-
-
-
-
