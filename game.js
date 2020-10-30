@@ -79,7 +79,7 @@ function verificar() {
 createObject()
 setInterval(moverImg, 5)
 setInterval(andarDiv, 5)
-setInterval(createObject, 2000)
+setInterval(createObject, 2500)
 setInterval(verificar, 0.001)
 
 //lógica da colisão frontal 
