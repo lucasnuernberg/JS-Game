@@ -20,39 +20,6 @@ function mudar(x) {
 
 
 
-/* imageElement[0].onclick = function mudar() {
-    linkImg = imageElement[0].src
-    confirmation = true
-
-}
-
-imageElement[1].onclick = function mudar() {
-    linkImg = imageElement[1].src
-    confirmation = true
-}
-
-imageElement[2].onclick = function mudar() {
-    linkImg = imageElement[2].src
-    confirmation = true
-}
-
-imageElement[3].onclick = function mudar() {
-    linkImg = imageElement[3].src
-    confirmation = true
-}
-imageElement[4].onclick = function mudar() {
-    linkImg = imageElement[4].src
-    confirmation = true
-}
-imageElement[5].onclick = function mudar() {
-    linkImg = imageElement[5].src
-    confirmation = true
-    
-} */
-
-
-
-
 
 
 
