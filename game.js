@@ -6,7 +6,11 @@ var posyImg = 0
 
 var posxDiv = 0
 var posyDiv = 0
-var conf = true
+
+var pontos = 0
+
+var pontoHtml = document.getElementById('ponto')
+
 
 var imgCreate = document.createElement('img')
 imgCreate.setAttribute('src', `${urlImg}`)
@@ -50,13 +54,17 @@ function createObject() {
         objeto.style.borderRadius = '100px'
         objeto.style.top = posyDiv + 'px'
         res.appendChild(objeto)
-        posxDiv = 0         
+        posxDiv = 0 
+        pontoHtml.innerHTML = pontos
+        pontos++
+
+
               
 }
 
 
 function andarDiv() {
-        posxDiv++
+        posxDiv += 1
         objeto.style.right =  posxDiv + 'px'
         
 }
@@ -65,23 +73,25 @@ function andarDiv() {
 
 
 document.onclick = function() {
-        posyImg -= 70   
+        posyImg -= 60   
         
 }
 
 function verificar() {
         if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
+                localStorage.setItem('pontos', `${pontos}`)                
                 document.location.href = 'gameover.html'
         }
         if (posyImg < 0 || posyImg >= 480) {
-                document.location.href = 'gameover.html'        
+                document.location.href = 'gameover.html'
+                localStorage.setItem('pontos', `${pontos}`) 
         }
 }
 
 createObject()
 setInterval(moverImg, 5)
-setInterval(andarDiv, 5)
-setInterval(createObject, 3000)
+setInterval(andarDiv, 4)
+setInterval(createObject, 2900)
 setInterval(verificar, 0.001)
 
 //lógica da colisão frontal 

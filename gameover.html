@@ -12,10 +12,16 @@
         <header>
             <h1>GAME OVER</h1>
         </header>
+        <h1 id="pontoOver"></h1>
 
         <div class="main-body">
             <a href="character.html"><button>PLAY AGAIN</button></a>
         </div>
     </div>
+    <script>
+        var pontos = localStorage.getItem('pontos')
+        var colocar = document.getElementById('pontoOver')
+        colocar.innerHTML = pontos
+    </script>
 </body>
 </html>
