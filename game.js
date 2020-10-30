@@ -1,18 +1,23 @@
 
 var res = document.getElementById('game')
 var urlImg = localStorage.getItem('url_image')
-var posxImg = 200
+var posxImg = 220
 var posyImg = 0
 
+var posxDiv = 0
 var posyDiv = 0
 var conf = true
 
 var imgCreate = document.createElement('img')
 imgCreate.setAttribute('src', `${urlImg}`)
-res.appendChild(imgCreate)
+imgCreate.style.width = '50px'
+imgCreate.style.height = '50px'
 imgCreate.style.position = 'absolute'
 imgCreate.style.right = posxImg + 'px'
 imgCreate.style.top = posyImg + 'px'
+imgCreate.style.margin = 0
+imgCreate.style.padding = 0
+res.appendChild(imgCreate)
 
 
 
@@ -25,7 +30,7 @@ function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function mover() {    
+function moverImg() {    
         posyImg += 1
         imgCreate.style.top = posyImg + 'px'
 }
@@ -34,39 +39,56 @@ function mover() {
 
 
 function createObject() {
-        let posicao = getRandomInt(0, 450)
+        posyDiv = getRandomInt(0, 450)          
         objeto = document.createElement('div')
         objeto.setAttribute('class', 'eneme')
-        objeto.style.width = '30px'
+        objeto.style.width = '25px'
         objeto.style.height = '100px'
         objeto.style.backgroundColor = 'black'
         objeto.style.position = 'absolute'
-        objeto.style.right = 0
-        objeto.style.top = posicao + 'px'
-        res.appendChild(objeto) 
-        posyDiv = 0
-        
+        objeto.style.right = posxDiv + 'px'
+        objeto.style.borderRadius = '100px'
+        objeto.style.top = posyDiv + 'px'
+        res.appendChild(objeto)
+        posxDiv = 0         
+              
 }
 
 
-function andar() {
-        posyDiv++
-        objeto.style.right =  posyDiv + 'px'
+function andarDiv() {
+        posxDiv++
+        objeto.style.right =  posxDiv + 'px'
         
 }
+        
+        
 
 
 document.onclick = function() {
-        posyImg -= 70
-        
+        posyImg -= 70       
         
         
 }
-setInterval(mover, 6)
-createObject()
-setInterval(andar, 10)
-setInterval(createObject, 4000)
 
+function verificar() {
+        if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
+                document.location.href = 'gameover.html'
+        }
+}
+
+createObject()
+setInterval(moverImg, 5)
+setInterval(andarDiv, 5)
+setInterval(createObject, 2000)
+setInterval(verificar, 0.001)
+
+//lógica da colisão frontal 
+//ainda falta fazer a lógica da colisão vertical 
+
+/* if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
+        console.log(posyImg)
+        alert(posyDiv)
+} */
 
 
 
