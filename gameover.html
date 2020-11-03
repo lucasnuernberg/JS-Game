@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <style>
+        img {
+            width: 100px;
+        }
+    </style>
     
 </head>
 <body>
@@ -14,6 +19,7 @@
         </header>
         <div class="ponto-estilo">
             <h1 id="pontoOver"></h1>
+            
         </div> 
         <div class="main-body">
             <a href="character.html"><button>PLAY AGAIN</button></a>
@@ -23,6 +29,11 @@
         var pontos = localStorage.getItem('pontos')
         var colocar = document.getElementById('pontoOver')
         colocar.innerHTML = pontos
+
+       
+
+        
+        
     </script>
 </body>
 </html>

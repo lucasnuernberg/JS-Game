@@ -4,6 +4,8 @@ var urlImg = localStorage.getItem('url_image')
 var posxImg = 220
 var posyImg = 0
 
+var deg = 0
+
 var posxDiv = 0
 var posyDiv = 0
 
@@ -49,11 +51,12 @@ function createObject() {
                 removerChild(objeto)
         }
         posyDiv = getRandomInt(0, 450)          
-        objeto = document.createElement('div')
-        objeto.setAttribute('class', 'eneme')
-        objeto.style.width = '25px'
-        objeto.style.height = '100px'
-        objeto.style.backgroundColor = 'black'
+        objeto = document.createElement('img')
+        objeto.setAttribute('src', 'images/shu.png')
+        objeto.setAttribute('id', 'imgShu')
+        objeto.style.width = '80px'
+        objeto.style.height = '80px'
+        //objeto.style.backgroundColor = 'black'
         objeto.style.position = 'absolute'
         objeto.style.right = posxDiv + 'px'
         objeto.style.borderRadius = '100px'
@@ -98,6 +101,17 @@ function removerChild(objeto) {
         res.removeChild(objeto)
 }
 
+function rodar() {
+        var imageElement = document.getElementById('imgShu')
+        imageElement.style.transform = `rotate(${deg}deg)`
+        deg += 5
+}
+
+    
+   
+
+    setInterval(rodar, 10)
+
 createObject()
 setInterval(moverImg, 6)
 setInterval(andarDiv, 4)
@@ -112,5 +126,28 @@ setInterval(verificar, 0.001)
         alert(posyDiv)
 } */
 
+/* function createObject() {
+        if (confirmar == true) {
+                removerChild(objeto)
+        }
+        posyDiv = getRandomInt(0, 450)          
+        objeto = document.createElement('div')
+        objeto.setAttribute('class', 'eneme')
+        objeto.style.width = '25px'
+        objeto.style.height = '100px'
+        objeto.style.backgroundColor = 'black'
+        objeto.style.position = 'absolute'
+        objeto.style.right = posxDiv + 'px'
+        objeto.style.borderRadius = '100px'
+        objeto.style.top = posyDiv + 'px'
+        res.appendChild(objeto)
+        pontoHtml.innerHTML = pontos
+        posxDiv = 0
+        pontos++
+        confirmar = true
+
+
+              
+} */
 
 
