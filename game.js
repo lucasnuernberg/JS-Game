@@ -7,6 +7,8 @@ var posyImg = 0
 var posxDiv = 0
 var posyDiv = 0
 
+var confirmar = false
+
 var pontos = 0
 
 var pontoHtml = document.getElementById('ponto')
@@ -43,6 +45,9 @@ function moverImg() {
 
 
 function createObject() {
+        if (confirmar == true) {
+                removerChild(objeto)
+        }
         posyDiv = getRandomInt(0, 450)          
         objeto = document.createElement('div')
         objeto.setAttribute('class', 'eneme')
@@ -54,9 +59,10 @@ function createObject() {
         objeto.style.borderRadius = '100px'
         objeto.style.top = posyDiv + 'px'
         res.appendChild(objeto)
-        posxDiv = 0 
         pontoHtml.innerHTML = pontos
+        posxDiv = 0
         pontos++
+        confirmar = true
 
 
               
@@ -86,6 +92,10 @@ function verificar() {
                 document.location.href = 'gameover.html'
                 localStorage.setItem('pontos', `${pontos}`) 
         }
+}
+
+function removerChild(objeto) {
+        res.removeChild(objeto)
 }
 
 createObject()

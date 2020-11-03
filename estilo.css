@@ -8,7 +8,7 @@ body {
     margin: auto;
     position: relative;    
     max-height: 100vh;
-    background: #8a2828;
+    background: #87b0c8;
 
 }
 
@@ -21,7 +21,7 @@ header h1, h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 5rem auto;
+    margin: 2rem auto;
     color: rgb(224, 228, 21);
     text-shadow: 2px 2px 2px black;
 }
@@ -57,6 +57,12 @@ div.main-fotos img {
 
 .center {
     margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.ponto-estilo {
     display: flex;
     justify-content: center;
     align-items: center;
