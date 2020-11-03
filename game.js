@@ -79,7 +79,7 @@ function andarDiv() {
 
 
 document.onclick = function() {
-        posyImg -= 60   
+        posyImg -= 50  
         
 }
 
@@ -99,7 +99,7 @@ function removerChild(objeto) {
 }
 
 createObject()
-setInterval(moverImg, 5)
+setInterval(moverImg, 6)
 setInterval(andarDiv, 4)
 setInterval(createObject, 2900)
 setInterval(verificar, 0.001)

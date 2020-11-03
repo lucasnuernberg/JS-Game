@@ -44,15 +44,17 @@ button {
 }
 
 div.main-fotos {
-    width: 320px;
+    width: 100%;
     margin: auto;
     
 }
 
 div.main-fotos img {
     width: 60px;
-    margin: 10px 20px 10px 20px;
+    height: 60px;
+    margin: 22px;
     border-radius: 10rem;
+
 }
 
 .center {
