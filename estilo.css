@@ -43,16 +43,21 @@ button {
     font-weight: 900;
 }
 
-div.main-fotos {
-    width: 100%;
-    margin: auto;
+div.main-fotos {    
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-end: 100px;
+    grid-column-end: 4;
+    grid-column-start: 1;
     
 }
 
 div.main-fotos img {
+    display: flex;
+
     width: 60px;
     height: 60px;
-    margin: 22px;
+    margin: 10px;
     border-radius: 10rem;
 
 }

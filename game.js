@@ -1,21 +1,22 @@
 
 var res = document.getElementById('game')
-var urlImg = localStorage.getItem('url_image')
-var posxImg = 220
-var posyImg = 0
 
 var deg = 0
-
-var posxDiv = 0
-var posyDiv = 0
-
 var confirmar = false
 
 var pontos = 0
-
 var pontoHtml = document.getElementById('ponto')
+var velocidade = 4
+var tempoCreate = 3000
 
+function aumentoVelo() {
+        velocidade -= 0.1
+        tempoCreate -= 100
+}
 
+var urlImg = localStorage.getItem('url_image')
+var posxImg = 260
+var posyImg = 0
 var imgCreate = document.createElement('img')
 imgCreate.setAttribute('src', `${urlImg}`)
 imgCreate.style.width = '50px'
@@ -27,9 +28,13 @@ imgCreate.style.margin = 0
 imgCreate.style.padding = 0
 res.appendChild(imgCreate)
 
-
-
 //funções 
+
+function moverImg() {    
+        posyImg += 1
+        imgCreate.style.top = posyImg + 'px'
+}
+
 
 //gera números aleatórios
 function getRandomInt(min, max) {
@@ -38,18 +43,16 @@ function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min)) + min;
 }
 
-function moverImg() {    
-        posyImg += 1
-        imgCreate.style.top = posyImg + 'px'
-}
 
 
-
+var posxDiv = 0
+var posyDiv = 0
 
 function createObject() {
         if (confirmar == true) {
                 removerChild(objeto)
         }
+
         posyDiv = getRandomInt(0, 450)          
         objeto = document.createElement('img')
         objeto.setAttribute('src', 'images/shu.png')
@@ -82,7 +85,7 @@ function andarDiv() {
 
 
 document.onclick = function() {
-        posyImg -= 50  
+        posyImg -= 60 
         
 }
 
@@ -110,13 +113,15 @@ function rodar() {
     
    
 
-    setInterval(rodar, 10)
 
 createObject()
 setInterval(moverImg, 6)
-setInterval(andarDiv, 4)
-setInterval(createObject, 2900)
-setInterval(verificar, 0.001)
+setInterval(andarDiv, velocidade)
+setInterval(createObject, tempoCreate)
+
+setInterval(5000)
+setInterval(verificar, 0.0001)
+setInterval(rodar, 10)
 
 //lógica da colisão frontal 
 //ainda falta fazer a lógica da colisão vertical 
