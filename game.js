@@ -91,7 +91,8 @@ document.onclick = function() {
 
 function verificar() {
         if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
-                localStorage.setItem('pontos', `${pontos}`)                
+                localStorage.setItem('pontos', `${pontos}`) 
+                imgCreate.src = ''               
                 document.location.href = 'gameover.html'
         }
         if (posyImg < 0 || posyImg >= 480) {
