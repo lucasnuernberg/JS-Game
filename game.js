@@ -70,6 +70,8 @@ function createObject() {
         pontos++
         confirmar = true
 
+        
+
 
               
 }
@@ -120,7 +122,7 @@ setInterval(moverImg, 6)
 setInterval(andarDiv, velocidade)
 setInterval(createObject, tempoCreate)
 
-setInterval(5000)
+setInterval(aumentoVelo, 5000)
 setInterval(verificar, 0.0001)
 setInterval(rodar, 10)
 

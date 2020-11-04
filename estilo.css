@@ -17,7 +17,7 @@ div.container {
 }
 
 header h1, h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,18 +46,16 @@ button {
 div.main-fotos {    
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    grid-column-end: 100px;
-    grid-column-end: 4;
-    grid-column-start: 1;
+    width: 90%;
+    margin: 1rem 1rem 7rem 3rem;
+    
     
 }
 
 div.main-fotos img {
-    display: flex;
-
     width: 60px;
     height: 60px;
-    margin: 10px;
+    margin-top: 50px;
     border-radius: 10rem;
 
 }
