@@ -47,15 +47,19 @@ div.main-fotos {
     display: grid;
     grid-template-columns: 33% 33% 33%;
     width: 90%;
-    margin: 1rem 1rem 7rem 3rem;
+    margin: auto;
+    /* margin: 1rem 1rem 7rem 3rem; */
     
     
 }
 
 div.main-fotos img {
-    width: 60px;
+/*     width: 60px;
     height: 60px;
-    margin-top: 50px;
+    margin-top: 50px; */
+    width: 90%;
+    margin: auto;
+    
     border-radius: 10rem;
 
 }
@@ -69,6 +73,10 @@ div.main-fotos img {
 
 div.ponto-estilo {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    margin-top: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+

@@ -68,12 +68,7 @@ function createObject() {
         pontoHtml.innerHTML = pontos
         posxDiv = 0
         pontos++
-        confirmar = true
-
-        
-
-
-              
+        confirmar = true             
 }
 
 
@@ -93,13 +88,15 @@ document.onclick = function() {
 
 function verificar() {
         if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
+                imgCreate.src = 'images/morte.png'              
                 localStorage.setItem('pontos', `${pontos}`) 
-                imgCreate.src = ''               
                 document.location.href = 'gameover.html'
         }
         if (posyImg < 0 || posyImg >= 480) {
-                document.location.href = 'gameover.html'
+                imgCreate.src = 'images/morte.png' 
                 localStorage.setItem('pontos', `${pontos}`) 
+                document.location.href = 'gameover.html'
+                
         }
 }
 
