@@ -7,7 +7,7 @@ var confirmar = false
 var pontos = 0
 var pontoHtml = document.getElementById('ponto')
 var velocidade = 4
-var tempoCreate = 3000
+var tempoCreate = 2000
 
 function aumentoVelo() {
         velocidade -= 0.1
@@ -45,7 +45,7 @@ function getRandomInt(min, max) {
 
 
 
-var posxDiv = 0
+var posxDiv = -10
 var posyDiv = 0
 
 function createObject() {
@@ -117,40 +117,9 @@ setInterval(moverImg, 6)
 setInterval(andarDiv, velocidade)
 setInterval(createObject, tempoCreate)
 
+
 setInterval(aumentoVelo, 5000)
 setInterval(verificar, 0.0001)
 setInterval(rodar, 10)
-
-//lógica da colisão frontal 
-//ainda falta fazer a lógica da colisão vertical 
-
-/* if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
-        console.log(posyImg)
-        alert(posyDiv)
-} */
-
-/* function createObject() {
-        if (confirmar == true) {
-                removerChild(objeto)
-        }
-        posyDiv = getRandomInt(0, 450)          
-        objeto = document.createElement('div')
-        objeto.setAttribute('class', 'eneme')
-        objeto.style.width = '25px'
-        objeto.style.height = '100px'
-        objeto.style.backgroundColor = 'black'
-        objeto.style.position = 'absolute'
-        objeto.style.right = posxDiv + 'px'
-        objeto.style.borderRadius = '100px'
-        objeto.style.top = posyDiv + 'px'
-        res.appendChild(objeto)
-        pontoHtml.innerHTML = pontos
-        posxDiv = 0
-        pontos++
-        confirmar = true
-
-
-              
-} */
 
 
