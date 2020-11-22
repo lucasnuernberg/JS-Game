@@ -1,16 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-
 }
 
 body {
     margin: auto;
     position: relative;    
     max-height: 100vh;
-    background: url('images/narutoFundo.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+    max-width: 100vh; 
+    font-family: 'Press Start 2P', cursive;
 
 }
 
@@ -19,13 +19,13 @@ div.container {
 }
 
 header h1, h3 {
-    font-size: 1.8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem auto;
-    color: rgb(224, 228, 21);
-    text-shadow: 2px 2px 2px black;
+    
+    font-size: 1.9rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 2rem 0 4.5rem 0;
+    color: rgb(255, 217, 0);
+    text-shadow: 5px 5px 1px black;
 }
 
 

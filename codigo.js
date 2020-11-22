@@ -14,6 +14,9 @@ function redirect() {
 }
 
 function mudar(x) {
+
     linkImg = imageElement[x + 1].src
+    console.log(linkImg)
     confirmation = true
+    redirect()
 }
