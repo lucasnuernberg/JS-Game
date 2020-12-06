@@ -4,6 +4,8 @@ var res = document.getElementById('game')
 var deg = 0
 var confirmar = false
 
+var record;
+
 var pontos = 0
 var pontoHtml = document.getElementById('ponto')
 var velocidade = 4
@@ -88,14 +90,14 @@ document.onclick = function() {
 
 function verificar() {
         if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
-                localStorage.setItem('pontos', `${pontos}`) 
+                localStorage.setItem('pontos', `${pontos}`)               
                 document.location.href = 'gameover.html'
         }
-        if (posyImg < 0 || posyImg >= 480) {
+        if (posyImg < 0 || posyImg > 480) {
                 localStorage.setItem('pontos', `${pontos}`) 
-                document.location.href = 'gameover.html'
-                
+                document.location.href = 'gameover.html'             
         }
+
 }
 
 function removerChild(objeto) {

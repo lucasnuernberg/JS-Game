@@ -24,7 +24,7 @@
             <h1>GAME OVER</h1>
         </header>
         <div class="ponto-estilo">
-            <h1 id="pontoOver"></h1>
+            <h1 id="pontoOver">Pontos:</h1>
             
         </div> 
         <div class="main-body">
@@ -32,14 +32,13 @@
         </div>
     </div>
     <script>
+        
         var pontos = localStorage.getItem('pontos')
+        var pontoC = localStorage.setItem('pontoC', pontos)
         var colocar = document.getElementById('pontoOver')
-        colocar.innerHTML = pontos
-
-       
-
+        colocar.innerHTML = `Points: ${pontos}<br />`
         
-        
+
     </script>
 </body>
 </html>
