@@ -121,7 +121,7 @@ setInterval(createObject, tempoCreate)
 
 
 setInterval(aumentoVelo, 5000)
-setInterval(verificar, 0.0001)
+setInterval(verificar, 1)
 setInterval(rodar, 10)
 
 
