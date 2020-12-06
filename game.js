@@ -93,7 +93,7 @@ function verificar() {
                 localStorage.setItem('pontos', `${pontos}`)               
                 document.location.href = 'gameover.html'
         }
-        if (posyImg < 0 || posyImg >= 480) {
+        if (posyImg < 0 || posyImg >= 490) {
                 localStorage.setItem('pontos', `${pontos}`) 
                 document.location.href = 'gameover.html'            
         }
