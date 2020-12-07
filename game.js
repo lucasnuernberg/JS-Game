@@ -90,11 +90,19 @@ document.onclick = function() {
 
 function verificar() {
         if (posyImg + 50 >= posyDiv & posyImg <= posyDiv + 100 & posxDiv + 25 == posxImg) {
-                localStorage.setItem('pontos', `${pontos}`)               
+                localStorage.setItem('pontos', `${pontos}`)
+                posxDiv = 0;
+                posyDiv = 0;            
+                posxImg = 0;
+                posyImg = 0;
                 document.location.href = 'gameover.html'
         }
         if (posyImg < 0 || posyImg >= 490) {
-                localStorage.setItem('pontos', `${pontos}`) 
+                localStorage.setItem('pontos', `${pontos}`)
+                posxDiv = 0;
+                posyDiv = 0;            
+                posxImg = 0;
+                posyImg = 0;
                 document.location.href = 'gameover.html'            
         }
 
