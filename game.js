@@ -3,6 +3,7 @@ var res = document.getElementById('game')
 
 var deg = 0
 var confirmar = false
+var screenHeight = screen.height;
 
 var record;
 
@@ -55,7 +56,7 @@ function createObject() {
                 removerChild(objeto)
         }
 
-        posyDiv = getRandomInt(0, 450)          
+        posyDiv = getRandomInt(0, screenHeight - 50)          
         objeto = document.createElement('img')
         objeto.setAttribute('src', 'images/shu.png')
         objeto.setAttribute('id', 'imgShu')
@@ -97,7 +98,7 @@ function verificar() {
                 posyImg = 0;
                 document.location.href = 'gameover.html'
         }
-        if (posyImg < 0 || posyImg >= 490) {
+        if (posyImg < 0 || posyImg >= screenHeight) {
                 localStorage.setItem('pontos', `${pontos}`)
                 posxDiv = 0;
                 posyDiv = 0;            
