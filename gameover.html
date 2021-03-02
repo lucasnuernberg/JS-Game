@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" type="text/css" href="estilo.css" />
+    <link rel="stylesheet" href="styles/style-game.css">
     <style>
         img {
             width: 100px;
@@ -12,8 +13,16 @@
 
         body {
             background: url('images/narutoGameOver.jpg');
-            background-size: 100%;
-            background-position: center;            
+            background-repeat: no-repeat;
+            background-size: 100% 100%;           
+            background-position: center;           
+        }
+
+        @media (min-width: 480px) {
+            body {
+                background: url('');
+                background-color: rgb(152, 218, 218);
+            }
         }
     </style>
     

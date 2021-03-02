@@ -5,30 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" type="text/css" href="estilo.css" />
-    <style>
-        body {
-            background-color: rgb(216, 81, 81);
-            border: 8px solid black; 
-        }
-
-       
-    </style>
-    
+    <link rel="stylesheet" href="styles/style-game.css">    
 </head>
 <body>
-    <div class="container">
-        <div id="game" class="main-fotos">
-        </div>
+
+   
+    <div class="containerGame" id="game" class="main-fotos">
+
         <div class="ponto-estilo">
             <h1 id="ponto">0</h1>
         </div>
+
+    </div>
+   
+
     <script src="codigo.js"></script>
     <script src="game.js"></script>
     <script>
-        var screenHeight = screen.height;
-        
-        document.body.style.height = screenHeight + 'px';
-        
+        var screenHeight = screen.height;        
+        document.body.style.height = (screenHeight -15) + 'px';        
     </script>
 </body>
 </html>

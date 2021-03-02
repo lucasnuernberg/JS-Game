@@ -1,0 +1,32 @@
+div.containerGame {
+  background-color: aqua; 
+  height: 100vh; 
+  border: 2px solid black;
+ 
+}  
+
+div.container {
+    height: 100vh;
+}
+
+div.container header h1 {
+    margin-top: 4rem;
+}
+
+div.ponto-estilo {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 1rem;
+}
+
+@media (min-width: 480px) {
+    div.containerGame {
+        background-color: bisque;
+    }
+}
+
+
+

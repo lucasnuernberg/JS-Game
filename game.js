@@ -1,9 +1,10 @@
 
 var res = document.getElementById('game')
-
 var deg = 0
 var confirmar = false
+
 var screenHeight = screen.height;
+var screenWidth = screen.width;        
 
 var record;
 
@@ -11,19 +12,26 @@ var pontos = 0
 var pontoHtml = document.getElementById('ponto')
 var velocidade = 4
 var tempoCreate = 2000
+var posxImg;
 
 function aumentoVelo() {
-        velocidade -= 0.1
-        tempoCreate -= 100
+        velocidade -= 0.5
+        tempoCreate -= 200
+}
+
+if (screenWidth > 470) {
+        posxImg = 480
+} else {
+        posxImg = 260
 }
 
 var urlImg = localStorage.getItem('url_image')
-var posxImg = 260
 var posyImg = 0
 var imgCreate = document.createElement('img')
 imgCreate.setAttribute('src', `${urlImg}`)
 imgCreate.style.width = '50px'
 imgCreate.style.height = '50px'
+imgCreate.style.borderRadius = '50%'
 imgCreate.style.position = 'absolute'
 imgCreate.style.right = posxImg + 'px'
 imgCreate.style.top = posyImg + 'px'
@@ -62,7 +70,7 @@ function createObject() {
         objeto.setAttribute('id', 'imgShu')
         objeto.style.width = '80px'
         objeto.style.height = '80px'
-        //objeto.style.backgroundColor = 'black'
+        
         objeto.style.position = 'absolute'
         objeto.style.right = posxDiv + 'px'
         objeto.style.borderRadius = '100px'
@@ -71,7 +79,9 @@ function createObject() {
         pontoHtml.innerHTML = pontos
         posxDiv = 0
         pontos++
-        confirmar = true             
+        confirmar = true
+        console.log(tempoCreate)         
+        console.log(velocidade)
 }
 
 
