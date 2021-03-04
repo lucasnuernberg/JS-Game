@@ -3,7 +3,7 @@ var res = document.getElementById('game')
 var deg = 0
 var confirmar = false
 
-var screenHeight = screen.height;
+var screenHeight = screen.height * 0.99;
 var screenWidth = screen.width;        
 
 var record;
@@ -13,14 +13,13 @@ var pontoHtml = document.getElementById('ponto')
 var velocidade = 4
 var tempoCreate = 2000
 var posxImg;
+var posxDiv = -10
+var posyDiv = 0
 
-function aumentoVelo() {
-        velocidade -= 0.5
-        tempoCreate -= 200
-}
+
 
 if (screenWidth > 470) {
-        posxImg = 480
+        posxImg = 450
 } else {
         posxImg = 260
 }
@@ -40,7 +39,10 @@ imgCreate.style.padding = 0
 res.appendChild(imgCreate)
 
 //funções 
-
+function aumentoVelo() {
+        velocidade -= 0.5
+        tempoCreate -= 200
+}
 function moverImg() {    
         posyImg += 1
         imgCreate.style.top = posyImg + 'px'
@@ -56,15 +58,14 @@ function getRandomInt(min, max) {
 
 
 
-var posxDiv = -10
-var posyDiv = 0
+
 
 function createObject() {
         if (confirmar == true) {
                 removerChild(objeto)
         }
 
-        posyDiv = getRandomInt(0, screenHeight - 50)          
+        posyDiv = getRandomInt(0, screenHeight - 90)          
         objeto = document.createElement('img')
         objeto.setAttribute('src', 'images/shu.png')
         objeto.setAttribute('id', 'imgShu')
@@ -80,8 +81,7 @@ function createObject() {
         posxDiv = 0
         pontos++
         confirmar = true
-        console.log(tempoCreate)         
-        console.log(velocidade)
+       
 }
 
 
@@ -92,6 +92,12 @@ function andarDiv() {
 }
         
         
+
+window.document.addEventListener('keyup', function(e) {
+        var codigoTecla = e.which || e.keyCode || 0;
+        var validacao = codigoTecla == 32;
+        if (validacao) posyImg -= 60;
+})
 
 
 document.onclick = function() {

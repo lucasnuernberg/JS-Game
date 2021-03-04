@@ -1,6 +1,8 @@
 div.containerGame {
   background-color: aqua; 
-  height: 100vh; 
+  
+  height: 99%;
+  
   border: 2px solid black;
  
 }  
