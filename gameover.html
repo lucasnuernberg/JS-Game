@@ -25,8 +25,7 @@
                 background-color: rgb(152, 218, 218);
             }
         }
-    </style>
-    
+    </style>    
 </head>
 <body>
     <div class="container">
@@ -34,21 +33,17 @@
             <h1>GAME OVER</h1>
         </header>
         <div class="ponto-estilo">
-            <h1 id="pontoOver">Pontos:</h1>
-            
+            <h1 id="pontoOver">Pontos:</h1>            
         </div> 
         <div class="main-body">
             <a href="character.html"><button>PLAY AGAIN</button></a>
         </div>
     </div>
     <script>
-        
         var pontos = localStorage.getItem('pontos')
         var pontoC = localStorage.setItem('pontoC', pontos)
         var colocar = document.getElementById('pontoOver')
         colocar.innerHTML = `Points: ${pontos}<br />`
-        
-
     </script>
 </body>
 </html>

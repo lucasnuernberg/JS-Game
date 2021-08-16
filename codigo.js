@@ -1,14 +1,14 @@
-var confirmation = false
-var imageElement = document.getElementsByTagName('img')
-var linkImg = ''
+var confirmation = false;
+var imageElement = document.getElementsByTagName('img');
+var linkImg = '';
 
 function redirect() {
 
     if (confirmation == true) {
         localStorage.setItem('url_image', `${linkImg}`)
-        window.location.href = 'game.html'
+        window.location.href = 'game.html';
     } else {
-        alert('Antes selecione uma imagem')
+        alert('Antes selecione uma imagem');
     }
 
 }
@@ -16,7 +16,7 @@ function redirect() {
 function mudar(x) {
 
     linkImg = imageElement[x + 1].src
-    console.log(linkImg)
-    confirmation = true
-    redirect()
+    console.log(linkImg);
+    confirmation = true;
+    redirect();
 }
