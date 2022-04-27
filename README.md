@@ -1,4 +1,3 @@
 # JS-Game
-* I am creating a simple Game
-* Until now just work in smartphones
+* Naruto Game
 * https://lucasnuernberg.github.io/JS-Game/
