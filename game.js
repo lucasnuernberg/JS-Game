@@ -1,5 +1,3 @@
-
-var record;
 var res = document.getElementById('game')
 var deg = 0;
 var confirmar = false;
@@ -7,11 +5,12 @@ var screenHeight = screen.height;
 var screenWidth = screen.width;
 var pontos = 0;
 var pontoHtml = document.getElementById('ponto');
-var velocidade = 4;
-var tempoCreate = 2000;
+var velocidade = -100;
+var tempoCreate = 3000;
 var posxImg;
 var posxDiv = -10;
 var posyDiv = 0;
+let criterioDificuldade = 5;
 
 
 if (screenWidth > 470) {
@@ -37,7 +36,7 @@ res.appendChild(imgCreate);
 
 function aumentoVelo() {
         velocidade -= 0.5;
-        tempoCreate -= 200;
+        tempoCreate -= 1000;
 }
 
 function moverImg() {    
@@ -57,7 +56,7 @@ function createObject() {
         if (confirmar == true) {
                 removerChild(objeto);
         }
-        posyDiv = getRandomInt(0, screenHeight - 135)        
+        posyDiv = getRandomInt(0, screenHeight - 150)        
         objeto = document.createElement('img');
         objeto.setAttribute('src', 'images/shu.png');
         objeto.setAttribute('id', 'imgShu');
@@ -77,11 +76,8 @@ function createObject() {
 
 function andarDiv() {
         posxDiv += 1;
-        objeto.style.right =  posxDiv + 'px';
-        
-}
-        
-        
+        objeto.style.right =  posxDiv + 'px';        
+}        
 
 window.document.addEventListener('keyup', function(e) {
         var codigoTecla = e.which || e.keyCode || 0;
@@ -125,13 +121,13 @@ function rodar() {
         deg += 5;
 }
 
-
 createObject();
 setInterval(moverImg, 6);
 setInterval(andarDiv, velocidade);
 setInterval(createObject, tempoCreate);
 setInterval(aumentoVelo, 5000);
-setInterval(verificar, 1);
+setInterval(verificar, 3);
 setInterval(rodar, 10);
+
 
 
